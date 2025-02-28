@@ -20,6 +20,8 @@ return new class extends Migration
             $table->boolean('published')->default('0');
             $table->boolean('inStock')->default(0);
             $table->decimal('price', 10, 2);
+            $table->unsignedBigInteger('brand_id');
+            $table->unsignedBigInteger('category_id');
             $table->timestamps();
         });
     }
